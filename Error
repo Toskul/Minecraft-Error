@@ -1,0 +1,61 @@
+
+
+[21:04:37] [main/WARN] [minecraft/Main]: Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --safeMode
+java.util.concurrent.ExecutionException: java.lang.NoClassDefFoundError: com/simibubi/create/content/contraptions/components/structureMovement/MovementBehaviour
+        at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[?:?] {re:mixin}
+        at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[?:?] {re:mixin}
+        at net.minecraft.server.Main.main(Main.java:182) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:classloading,re:mixin,pl:mixin:A}
+        at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+        at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?] {}
+        at net.minecraftforge.fml.loading.targets.CommonServerLaunchHandler.lambda$launchService$0(CommonServerLaunchHandler.java:29) ~[fmlloader-1.19.2-43.2.8.jar%2367!/:?] {}
+        at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.8.jar%2354!/:?] {}
+        at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+Caused by: java.lang.NoClassDefFoundError: com/simibubi/create/content/contraptions/components/structureMovement/MovementBehaviour
+        at net.mehvahdjukaar.supplementaries.integration.CreateCompat.setup(CreateCompat.java) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading}
+        at net.mehvahdjukaar.supplementaries.integration.CompatHandler.setup(CompatHandler.java:72) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:mixin,re:classloading}
+        at net.mehvahdjukaar.supplementaries.reg.ModSetup.tagDependantSetup(ModSetup.java:129) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading}
+        at net.mehvahdjukaar.supplementaries.common.events.ServerEvents.onCommonTagUpdate(ServerEvents.java:139) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:mixin,re:classloading}
+        at net.mehvahdjukaar.supplementaries.common.events.forge.ServerEventsForge.onTagUpdate(ServerEventsForge.java:138) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading}
+        at net.mehvahdjukaar.supplementaries.common.events.forge.__ServerEventsForge_onTagUpdate_TagsUpdatedEvent.invoke(.dynamic) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading,pl:eventbus:B}
+        at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%2351!/:?] {}
+        at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%2351!/:?] {}
+        at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%2351!/:?] {}
+        at net.minecraft.server.ReloadableServerResources.m_206868_(ReloadableServerResources.java:101) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+        at net.minecraft.server.WorldLoader.m_214372_(WorldLoader.java:35) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:classloading}
+        at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646) ~[?:?] {}
+        at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+        at net.minecraft.Util.m_214652_(Util.java:781) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:mixin,re:classloading,pl:mixin:APP:kubejs-common.mixins.json:UtilMixin,pl:mixin:APP:mixin.imdlib-whisperwoods.json:UtilMixin,pl:mixin:A}
+        at net.minecraft.Util.m_214679_(Util.java:770) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:mixin,re:classloading,pl:mixin:APP:kubejs-common.mixins.json:UtilMixin,pl:mixin:APP:mixin.imdlib-whisperwoods.json:UtilMixin,pl:mixin:A}
+        at net.minecraft.server.Main.main(Main.java:157) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:classloading,re:mixin,pl:mixin:A}
+        ... 11 more
+Caused by: java.lang.ClassNotFoundException: com.simibubi.create.content.contraptions.components.structureMovement.MovementBehaviour
+        at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?] {}
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?] {}
+        at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:137) ~[securejarhandler-2.1.4.jar:?] {}
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?] {}
+        at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:137) ~[securejarhandler-2.1.4.jar:?] {}
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?] {}
+        at net.mehvahdjukaar.supplementaries.integration.CreateCompat.setup(CreateCompat.java) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading}
+        at net.mehvahdjukaar.supplementaries.integration.CompatHandler.setup(CompatHandler.java:72) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:mixin,re:classloading}
+        at net.mehvahdjukaar.supplementaries.reg.ModSetup.tagDependantSetup(ModSetup.java:129) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading}
+        at net.mehvahdjukaar.supplementaries.common.events.ServerEvents.onCommonTagUpdate(ServerEvents.java:139) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:mixin,re:classloading}
+        at net.mehvahdjukaar.supplementaries.common.events.forge.ServerEventsForge.onTagUpdate(ServerEventsForge.java:138) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading}
+        at net.mehvahdjukaar.supplementaries.common.events.forge.__ServerEventsForge_onTagUpdate_TagsUpdatedEvent.invoke(.dynamic) ~[supplementaries-1.19.2-2.3.4.jar%23436!/:?] {re:classloading,pl:eventbus:B}
+        at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%2351!/:?] {}
+        at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%2351!/:?] {}
+        at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%2351!/:?] {}
+        at net.minecraft.server.ReloadableServerResources.m_206868_(ReloadableServerResources.java:101) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+        at net.minecraft.server.WorldLoader.m_214372_(WorldLoader.java:35) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:classloading}
+        at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646) ~[?:?] {}
+        at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+        at net.minecraft.Util.m_214652_(Util.java:781) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:mixin,re:classloading,pl:mixin:APP:kubejs-common.mixins.json:UtilMixin,pl:mixin:APP:mixin.imdlib-whisperwoods.json:UtilMixin,pl:mixin:A}
+        at net.minecraft.Util.m_214679_(Util.java:770) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:mixin,re:classloading,pl:mixin:APP:kubejs-common.mixins.json:UtilMixin,pl:mixin:APP:mixin.imdlib-whisperwoods.json:UtilMixin,pl:mixin:A}
+        at net.minecraft.server.Main.main(Main.java:157) ~[server-1.19.2-20220805.130853-srg.jar%23461!/:?] {re:classloading,re:mixin,pl:mixin:A}
+        ... 11 more
+
